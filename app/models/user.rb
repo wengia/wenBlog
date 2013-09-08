@@ -1,3 +1,3 @@
 class User < ActiveRecord::Base
-  has_many :bolgs
+  has_many :blogs
 end

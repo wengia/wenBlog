@@ -1,0 +1,10 @@
+<h1>Editing blog</h1>
+<% if user_id > User.count %>
+  <%= flash[:notice] = "Sorry, the user with ID #{user_id} doesn't exist!" %>
+  <% redirect_to(blog_path) %>
+<% end %>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @blog %> |
+<%= link_to 'Back', blogs_path %>

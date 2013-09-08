@@ -1,7 +1,11 @@
 WenBlog::Application.routes.draw do
   resources :blogs
 
-  resources :users
+  get '/users/:id/blogs' => "blogs#find_by_user"
+
+  resources :users do
+    resources :blogs
+  end
 
   root :to => 'blogs#index'
 

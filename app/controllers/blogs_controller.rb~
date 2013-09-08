@@ -1,5 +1,11 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+ 
+  def find_by_user
+    @user = User.find(params[:id])
+    @blogs = @user.blogs
+    render :action => 'show'
+  end
 
   # GET /blogs
   # GET /blogs.json
