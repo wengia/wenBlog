@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130907200913) do
+ActiveRecord::Schema.define(version: 20130908183154) do
 
   create_table "blogs", force: true do |t|
     t.string   "message"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20130907200913) do
     t.string   "addr"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_digest"
   end
 
 end
