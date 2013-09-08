@@ -1,3 +1,10 @@
 <% provide(:title, 'Square') %>
-<h1>MainPages#square</h1>
-<p>Find me in app/views/main_pages/square.html.erb</p>
+<div class = "center hero-unit">
+  <h1>Square of WenBlog</h1>
+  <%= link_to "Sign up now!", '#', class:"btn btn-large btn-primary" %>  
+  <h2>
+    This should be the place for users and their message
+  </h2>
+  
+  <p>Find me in app/views/main_pages/square.html.erb</p>
+</div>
