@@ -2,10 +2,7 @@
 
 <p>
   <strong>Message:</strong>
-  <% the_user = @blog.user %>
-  <% the_user.blogs.each do |the_user_massage| %>
-    <em> <br> <%= the_user_massage.message %></em>
-  <% end %>
+  <em><br><%= @blog.message %></em>
 </p>
 
 <p>

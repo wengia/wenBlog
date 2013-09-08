@@ -11,4 +11,5 @@ class User < ActiveRecord::Base
   validates :addr, length: { maximum: 100 }
 
   has_secure_password
+  validates :password, length: { minimum: 3 }
 end

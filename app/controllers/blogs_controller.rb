@@ -21,7 +21,7 @@ class BlogsController < ApplicationController
   def edit
     if session[:user_id] != @blog.user_id
       flash[:notice] = "Sorry, you don't have the right to edit this blog!"
-      redirect_to(blog_path)
+      redirect_to(blogs_path)
     end
   end
 

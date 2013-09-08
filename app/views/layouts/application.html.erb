@@ -17,7 +17,7 @@
         <nav>
           <ul class = "nav pull-right">
             <li><%= link_to "Square", "/square" %></li>
-            <li><%= link_to "Blog", "/blog" %></li>
+            <li><%= link_to "Blog", "/personalBlog" %></li>
             <li><%= link_to "Sign In", "/sign_in"%>
           </ul>
         </nav>
@@ -25,6 +25,7 @@
     </div>
   </header>
   <div class = "container">
+    <em><%= flash.notice %></em>
     <%= yield %>
   </div>
 </body>

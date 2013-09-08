@@ -1,7 +1,7 @@
 WenBlog::Application.routes.draw do
-  match '/sign_up', to: "user#new", via:'get'
+  match '/sign_up', to: "users#new", via:'get'
   match '/square', to: "main_pages#square", via:'get'
-  match '/blog', to: "main_pages#blog", via:'get'
+  match '/personalBlog', to: "users#show", via:'get'
   match '/sign_in', to: "main_pages#sign_in", via:'get'
 
   resources :blogs

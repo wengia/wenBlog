@@ -16,9 +16,9 @@
         <%= link_to "Function", '#', id:"logo" %>
         <nav>
           <ul class = "nav pull-right">
-            <li><%= link_to "Square", "#" %></li>
-            <li><%= link_to "Blog", "#" %></li>
-            <li><%= link_to "Sign In", "#"%>
+            <li><%= link_to "Square", "/square" %></li>
+            <li><%= link_to "Blog", "/personalBlog" %></li>
+            <li><%= link_to "Sign In", "/sign_in"%>
           </ul>
         </nav>
       </div>
@@ -27,5 +27,6 @@
   <div class = "container">
     <%= yield %>
   </div>
+  <div><%= flash.notice %></div>
 </body>
 </html>

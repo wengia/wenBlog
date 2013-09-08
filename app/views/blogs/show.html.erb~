@@ -4,7 +4,7 @@
   <strong>Message:</strong>
   <% the_user = @blog.user %>
   <% the_user.blogs.each do |the_user_massage| %>
-    <em><%= the_user_massage.message %> <br> </em>
+    <em> <br> <%= the_user_massage.message %></em>
   <% end %>
 </p>
 

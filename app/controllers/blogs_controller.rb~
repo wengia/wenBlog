@@ -1,11 +1,5 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
- 
-  def find_by_user
-    @user = User.find(params[:id])
-    @blogs = @user.blogs
-    render :action => 'show'
-  end
 
   # GET /blogs
   # GET /blogs.json
@@ -26,8 +20,8 @@ class BlogsController < ApplicationController
   # GET /blogs/1/edit
   def edit
     if session[:user_id] != @blog.user_id
-      flash[:notice] = "Sorry, you don't have the right to edit this blog!"
-      redirect_to(blog_path)
+      flash.keep[:notice] = "Sorry, you don't have the right to edit this blog!"
+      redirect_to(blogs_path)
     end
   end
 
