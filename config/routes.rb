@@ -1,9 +1,13 @@
 WenBlog::Application.routes.draw do
+  get "main_pages/square"
+  get "main_pages/blog"
+  get "main_pages/sign_in"
+
   resources :blogs
 
   resources :users
 
-  root :to => 'blogs#index'
+  root 'main_pages#square'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
